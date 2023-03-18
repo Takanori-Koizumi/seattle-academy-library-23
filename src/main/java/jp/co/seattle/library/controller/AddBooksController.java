@@ -102,8 +102,8 @@ public class AddBooksController {
 
 		// 書籍情報を新規登録する
 		int bookId = booksService.registBook(bookInfo);
-
+		
 		// 詳細画面に遷移する
-		return "redirect:/details?bookId=" + bookId;
+		return "redirect:/home";
 	}
 }

@@ -103,6 +103,6 @@ public class EditBookController {
 		booksService.updateBook(bookInfo);
 
 		// 詳細画面に遷移する
-		return "redirect:/details?bookId=" + bookId;
+		return "redirect:/home";
 	}
 }

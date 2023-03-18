@@ -30,6 +30,4 @@ public class BookDetailsInfo {
 
 	private String description;
 
-	private String lendingStatus;
-
 }

@@ -210,6 +210,8 @@ a:hover, button:hover {
 }
 .bookBtn_box{
     text-align: center;
+    display: flex;
+    justify-content: center;
 }
 .edtDelBookBtn_box {
     display: flex;

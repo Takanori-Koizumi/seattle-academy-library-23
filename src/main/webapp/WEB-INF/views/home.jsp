@@ -36,7 +36,7 @@
                 <div class="booklist">
                     <c:forEach var="bookInfo" items="${bookList}">
                         <div class="books">
-                            <form method="get" class="book_thumnail" action="details">
+                            <form method="get" class="book_thumnail" action="editBook">
                                 <a href="javascript:void(0)" onclick="this.parentNode.submit();"> <c:if test="${empty bookInfo.thumbnail}">
                                         <img class="book_noimg" src="resources/img/noImg.png">
                                     </c:if> <c:if test="${!empty bookInfo.thumbnail}">

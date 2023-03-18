@@ -38,17 +38,9 @@ public class DeleteBookController {
 	@RequestMapping(value = "/deleteBook", method = RequestMethod.POST)
 	public String deleteBook(Locale locale, int bookId, RedirectAttributes redirectAttributes) {
 		logger.info("Welcome delete! The client locale is {}.", locale);
-
-		// 書籍の貸出し状態を取得する
-		boolean isLend = lendingService.checkLendingStatus(bookId);
-
-		if (isLend) {
-			redirectAttributes.addFlashAttribute("error", "貸し出し中のため削除できません。");
-			return "redirect:/details?bookId=" + bookId;
-		} else {
-			// 書籍の削除
-			booksService.deleteBook(bookId);
-			return "redirect:/home";
-		}
+		
+		// 書籍の削除
+		booksService.deleteBook(bookId);
+		return "redirect:/home";
 	}
 }
