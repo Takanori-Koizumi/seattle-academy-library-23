@@ -38,7 +38,7 @@ public class EditBookController {
 	}
 
 	/**
-	 * 書籍情報を登録する
+	 * 書籍情報を更新する
 	 * 
 	 * @param locale      ロケール情報
 	 * @param title       書籍名
@@ -102,7 +102,7 @@ public class EditBookController {
 		// 書籍情報を更新する
 		booksService.updateBook(bookInfo);
 
-		// 詳細画面に遷移する
+		// 一覧画面に遷移する
 		return "redirect:/home";
 	}
 }
